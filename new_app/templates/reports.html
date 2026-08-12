@@ -1,0 +1,151 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card shadow border-0 p-4">
+
+    <h1 class="mb-4 text-center text-dark fw-bold">
+        Reports
+    </h1>
+
+
+    <div class="row g-4">
+
+
+        <!-- Employee Report -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 p-4 text-center">
+
+                <div class="card-body">
+
+                    <div class="report-icon employee-icon">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+
+                    <h4 class="text-dark mt-3">
+                        Employees
+                    </h4>
+
+                    <h2 class="fw-bold text-dark">
+                        {{ employee_count }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Department Report -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 p-4 text-center">
+
+                <div class="card-body">
+
+                    <div class="report-icon department-icon">
+                        <i class="bi bi-buildings-fill"></i>
+                    </div>
+
+                    <h4 class="text-dark mt-3">
+                        Departments
+                    </h4>
+
+                    <h2 class="fw-bold text-dark">
+                        {{ department_count }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Salary Report -->
+        <div class="col-md-4">
+
+            <div class="card shadow border-0 p-4 text-center">
+
+                <div class="card-body">
+
+                    <div class="report-icon salary-icon">
+                        <i class="bi bi-cash-stack"></i>
+                    </div>
+
+                    <h4 class="text-dark mt-3">
+                        Total Salary
+                    </h4>
+
+                    <h2 class="fw-bold text-dark">
+                        ₹ {{ total_salary }}
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <hr class="my-5">
+
+
+    <h3 class="text-center text-dark fw-bold">
+        Employee Summary
+    </h3>
+
+
+    <table class="table table-hover mt-4 shadow-sm">
+
+
+        <thead class="table-dark">
+
+            <tr>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            
+            {% if employees %}
+            
+            {% for emp in employees %}
+            
+            <tr>
+                <td>
+                    {{ emp.name }}
+                </td>
+                <td>
+                    {{ emp.department.name }}
+                </td>
+
+                <td>
+                    ₹ {{ emp.salary }}
+                </td>
+            </tr>
+            {% endfor %}
+            {% else %}
+
+            <tr>
+                <td colspan="3" class="text-center">
+                    No Data Available
+                </td>
+            </tr>
+            {% endif %}
+        </tbody>
+    </table>
+</div>
+
+
+{% endblock %}

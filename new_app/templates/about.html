@@ -1,0 +1,518 @@
+{% extends 'public_base.html' %}
+
+{% block content %}
+
+<style>
+
+body{
+    background:#f8fafc;
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+}
+
+
+/* HERO */
+.about-banner{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    height:420px;
+    border-radius:25px;
+    color:white;
+    padding:80px 60px;
+    margin-top:40px;
+    overflow:hidden;
+    display:flex;
+    align-items:center;
+}
+
+
+.about-banner h1{
+    font-size:45px;
+    font-weight:700;
+}
+
+
+.about-banner p{
+    font-size:18px;
+    margin-top:20px;
+}
+
+
+.hero-icon i{
+    font-size:170px;
+    color:#00d4ff;
+}
+
+
+/* Floating stats */
+.stats{
+margin-top:-30px;
+
+}
+
+.stat-card{
+
+background:white;
+padding:30px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.1);
+transition:.4s;
+
+}
+.stat-card:hover{
+transform:translateY(-12px);
+
+}
+
+.stat-card i{
+font-size:45px;
+color:#2563eb;
+}
+
+.stat-card h2{
+font-weight:700;
+
+}
+
+/* About */
+.about-box{
+background:white;
+padding:45px;
+border-radius:30px;
+box-shadow:0 10px 30px #00000014;
+
+}
+
+
+
+.about-box h2{
+
+font-weight:700;
+
+color:#0f172a;
+
+}
+
+
+
+.about-box i{
+
+font-size:50px;
+
+color:#2563eb;
+
+}
+
+
+
+/* Feature */
+
+
+.feature-card{
+
+background:white;
+
+padding:35px;
+
+height:250px;
+
+border-radius:25px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+
+.feature-card:hover{
+
+background:#2563eb;
+
+color:white;
+
+transform:translateY(-10px);
+
+}
+
+
+.feature-card i{
+
+font-size:45px;
+
+margin-bottom:20px;
+
+color:#2563eb;
+
+}
+
+
+.feature-card:hover i{
+
+color:white;
+
+}
+
+
+
+/* Timeline */
+
+
+.timeline{
+
+border-left:4px solid #2563eb;
+
+padding-left:30px;
+
+}
+
+
+.timeline div{
+
+margin-bottom:25px;
+
+}
+
+
+
+</style>
+
+
+
+
+<!-- HERO -->
+
+
+<section class="about-banner">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+
+<div class="col-md-7">
+
+
+<h1>  Employee Management
+<br>
+<span>System </span>
+</h1>
+
+
+<p>
+A smart Employee Management System that helps
+organizations manage employees, payroll and HR operations easily.
+</p>
+
+
+
+<div class="mt-4">
+
+<!-- 
+<a href="/dashboard/" 
+class="btn btn-light btn-lg rounded-pill px-5">
+
+Explore Dashboard
+
+</a> -->
+
+
+<a href="#services" onclick="document.getElementById('services').scrollIntoView();"
+class="btn btn-outline-light rounded-pill px-5 py-2 ms-3">
+Learn More
+</a>
+
+</div>
+
+
+</div>
+
+
+<div class="col-md-5 text-center">
+
+
+<div class="hero-icon">
+
+
+<i class="fa-solid fa-users-gear"></i>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+<div class="container">
+
+
+<!-- Statistics -->
+
+
+<div class="row stats g-4">
+
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-users"></i>
+
+<h2>500+</h2>
+
+<p>Employees Managed</p>
+
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-building"></i>
+
+<h2>50+</h2>
+
+<p>Departments</p>
+
+
+</div>
+
+</div>
+
+
+<div class="col-md-3">
+
+<div class="stat-card">
+
+<i class="fa-solid fa-chart-line"></i>
+
+<h2>99%</h2>
+
+<p>Accuracy</p>
+
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+<div class="stat-card">
+<i class="fa-solid fa-clock"></i>
+<h2>24/7</h2>
+<p>Availability</p>
+
+</div>
+</div>
+</div>
+
+<!-- ABOUT -->
+<div class="row mt-5">
+<div class="col-md-7">
+<div class="about-box">
+
+
+<h2> Who We Are </h2>
+
+
+<p>Employee Management System is a modern web application
+developed to simplify HR operations and employee data management.
+</p>
+
+
+<p>The system helps organizations manage employee profiles,
+departments, salaries and leave requests efficiently.
+</p>
+
+</div>
+</div>
+
+
+<div class="col-md-5">
+<div class="about-box text-center">
+<i class="fa-solid fa-people-group"></i>
+
+
+<h2>
+Smart HR Solution
+</h2>
+
+
+<p>
+One platform for complete workforce management.
+</p>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- WHY CHOOSE -->
+
+<h1 class="text-center mt-5 mb-4">
+
+Why Choose Us?
+
+</h1>
+
+
+
+<div class="row g-4">
+
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-shield-halved"></i>
+
+<h4>
+Secure Data
+</h4>
+
+<p>
+Employee information is managed safely.
+</p>
+
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+
+<i class="fa-solid fa-gears"></i>
+
+<h4>
+Automation
+</h4>
+
+<p>
+Reduce manual HR tasks with automation.
+</p>
+
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="feature-card">
+
+<i class="fa-solid fa-mobile-screen"></i>
+
+<h4>
+Easy Access
+</h4>
+
+<p>
+Manage employees anytime anywhere.
+</p>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- PROCESS -->
+
+
+<div class="row mt-5">
+
+
+<div class="col-md-6">
+
+
+<h2>
+How Our System Works
+</h2>
+
+
+<div class="timeline">
+
+
+<div>
+<h5>01. Add Employees</h5>
+<p>Create employee profiles.</p>
+</div>
+
+
+<div>
+<h5>02. Manage Departments</h5>
+<p>Organize workforce easily.</p>
+</div>
+
+
+<div>
+<h5>03. Track Salary & Leaves</h5>
+<p>Maintain payroll records.</p>
+</div>
+
+
+</div>
+
+
+</div>
+
+
+<div class="col-md-6 text-center">
+
+<i class="fa-solid fa-laptop-code"
+style="font-size:250px;color:#2563eb;">
+</i>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+{% endblock %}

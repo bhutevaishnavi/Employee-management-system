@@ -1,0 +1,152 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<div class="leave-container">
+
+
+<div class="card">
+
+
+<h2 class="text-center">
+    Apply Leave
+</h2>
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+<div class="mb-3">
+
+<label>
+Employee
+</label>
+
+<select name="employee" class="form-select" required>
+
+<option value="" disabled selected>
+Select Employee
+</option>
+
+
+{% for emp in employees %}
+
+<option value="{{emp.id}}">
+{{emp.name}}
+</option>
+
+{% endfor %}
+
+
+</select>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+Leave Type
+</label>
+
+<!-- <input 
+type="text"
+name="leave_type"
+class="form-control"
+placeholder="Enter Leave Type"> -->
+
+<select name="leave_type" class="form-select" required>
+
+    <option value="">
+        Select Leave Type
+    </option>
+
+    <option value="Casual Leave">
+        Casual Leave
+    </option>
+
+    <option value="Medical Leave">
+        Medical Leave
+    </option>
+
+    <option value="Sick Leave">
+        Sick Leave
+    </option>
+
+    <option value="Emergency Leave">
+        Emergency Leave
+    </option>
+
+</select>
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+Days
+</label>
+
+<input 
+type="number"
+name="days"
+value="1"
+class="form-control">
+
+</div>
+
+
+
+<div class="mb-3">
+
+<label>
+Reason
+</label>
+
+
+<textarea
+name="reason"
+class="form-control"
+placeholder="Enter Reason"></textarea>
+
+
+</div>
+
+
+
+<div class="text-center">
+
+
+<button class="btn btn-primary">
+Apply Leave
+</button>
+
+
+<a href="{% url 'leaves' %}" 
+class="btn btn-secondary">
+
+Back
+
+</a>
+
+
+</div>
+
+
+
+</form>
+
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

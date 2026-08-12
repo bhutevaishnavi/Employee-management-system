@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="card shadow border-0 p-4">
+
+    <h1 class="text-center mb-5">
+        Settings
+    </h1>
+
+
+    <div class="row g-4">
+
+
+        <!-- Profile Settings -->
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+
+                <h3 class="text-primary">
+                    Profile Settings
+                </h3>
+
+                <p>
+                    Manage your account information.
+                </p>
+
+
+                <a href="{% url 'edit_profile' %}" 
+                   class="btn btn-primary w-100">
+
+                    Edit Profile
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- System Settings -->
+        <div class="col-md-6">
+
+            <div class="card shadow p-4">
+
+                <h3 class="text-success">
+                    System Settings
+                </h3>
+
+                <p>
+                    Manage employee management system settings.
+                </p>
+
+
+                <a href="{% url 'update_settings' %}" 
+                   class="btn btn-success w-100">
+
+                    Update Settings
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+
+{% endblock %}

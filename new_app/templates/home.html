@@ -1,0 +1,322 @@
+{% extends 'public_base.html' %}
+
+{% block content %}
+
+<style>
+
+body{
+    background:#f4f7fb;
+    font-family:'Poppins',sans-serif;
+}
+
+
+/* Hero Section */
+
+.hero{
+    background:linear-gradient(135deg,#1e3c72,#2a5298);
+    height:420px;
+    border-radius:25px;
+    color:white;
+    padding:80px 60px;
+    margin-top:40px;
+}
+
+
+.hero h1{
+    font-size:45px;
+    font-weight:700;
+}
+
+
+.hero p{
+    font-size:18px;
+    margin-top:20px;
+}
+
+
+.hero .btn{
+    background:#00d4ff;
+    border:none;
+    padding:12px 35px;
+    border-radius:30px;
+    color:white;
+    font-size:18px;
+}
+
+
+
+/* Stats */
+
+.stats{
+    margin-top:-50px;
+}
+
+
+.card-box{
+
+    background:white;
+    padding:30px;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,.1);
+    text-align:center;
+    transition:.3s;
+
+}
+
+
+.card-box:hover{
+    transform:translateY(-10px);
+}
+
+
+.card-box i{
+
+    font-size:40px;
+    margin-bottom:15px;
+
+}
+
+
+.employee{
+    color:#2563eb;
+}
+
+.department{
+    color:#16a34a;
+}
+
+.salary{
+    color:#f59e0b;
+}
+
+.leave{
+    color:#dc2626;
+}
+
+
+
+/* Features */
+
+
+.feature{
+
+background:white;
+padding:30px;
+border-radius:20px;
+height:200px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+
+}
+
+
+.feature h4{
+
+font-weight:600;
+
+}
+
+
+
+</style>
+
+
+
+<div class="container">
+
+
+<!-- Hero -->
+
+<div class="hero">
+
+<div class="row align-items-center">
+
+<div class="col-md-7">
+
+<h1>Employee Management System</h1>
+
+<p>
+Manage employees, departments, salary,
+attendance and leaves easily with our powerful HR platform.
+</p>
+
+
+<!-- <a href="/dashboard/" class="btn mt-3">
+Open Dashboard
+</a> -->
+
+
+</div>
+
+
+<div class="col-md-5 text-center">
+
+<i class="fa-solid fa-users-gear"
+style="font-size:170px;color:#00d4ff;">
+</i>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+
+
+
+<!-- Stats -->
+
+
+<div class="row stats g-4">
+
+
+<div class="col-md-3">
+
+<div class="card-box">
+
+<i class="fa-solid fa-users employee"></i>
+
+<h3>{{employee_count}}</h3>
+
+<h5>Employees</h5>
+
+<p>Manage employee records</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card-box">
+
+<i class="fa-solid fa-building department"></i>
+
+<h3>{{department_count}}</h3>
+
+<h5>Departments</h5>
+
+<p>Organize departments</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card-box">
+
+<i class="fa-solid fa-money-bill salary"></i>
+
+<h3>{{salary_count}}</h3>
+
+<h5>Salary</h5>
+
+<p>Manage payroll</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-3">
+
+<div class="card-box">
+
+<i class="fa-solid fa-calendar-check leave"></i>
+
+<h3>{{leave_count}}</h3>
+
+<h5>Leaves</h5>
+
+<p>Track employee leaves</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<!-- Features -->
+
+
+<div class="row mt-5 g-4">
+
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h4>
+<i class="fa-solid fa-user-tie"></i>
+ Employee Management
+</h4>
+
+<p>
+Add, update and manage employee information easily.
+</p>
+
+</div>
+
+</div>
+
+
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h4>
+<i class="fa-solid fa-chart-line"></i>
+ Reports & Analytics
+</h4>
+
+<p>
+Get useful insights about employees and payroll.
+</p>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="feature">
+
+<h4>
+<i class="fa-solid fa-lock"></i>
+ Secure System
+</h4>
+
+<p>
+Role based login for admin and employees.
+</p>
+
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+{% endblock %}

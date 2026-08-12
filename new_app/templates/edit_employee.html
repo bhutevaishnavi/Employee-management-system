@@ -1,0 +1,222 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="container-fluid mt-4">
+
+<div class="row justify-content-center">
+
+<div class="col-md-8">
+
+
+<div class="card shadow-lg border-0">
+
+<div class="card-header bg-primary text-white text-center">
+
+<h2>
+<i class="bi bi-person-fill"></i>
+Edit Employee
+</h2>
+
+</div>
+
+
+<div class="card-body p-4">
+
+
+<form method="POST">
+
+{% csrf_token %}
+
+
+<div class="row">
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Name
+</label>
+
+<input type="text"
+name="name"
+class="form-control"
+value="{{employee.name}}">
+
+</div>
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Email
+</label>
+
+<input type="email"
+name="email"
+class="form-control"
+value="{{employee.email}}">
+
+</div>
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Mobile
+</label>
+
+<input type="text"
+name="mobile"
+class="form-control"
+value="{{employee.mobile}}">
+
+</div>
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Department
+</label>
+
+
+<select name="department"
+class="form-select">
+
+
+{% for d in departments %}
+
+<option value="{{d.id}}"
+{% if employee.department.id == d.id %}
+selected
+{% endif %}>
+
+{{d.name}}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+
+</div>
+
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Position
+</label>
+
+
+<select name="position"
+class="form-select">
+
+
+{% for p in positions %}
+
+<option value="{{p.id}}"
+{% if employee.position.id == p.id %}
+selected
+{% endif %}>
+
+{{p.name}}
+
+</option>
+
+
+{% endfor %}
+
+
+</select>
+
+
+</div>
+
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Salary
+</label>
+
+
+<input type="number"
+name="salary"
+class="form-control"
+value="{{employee.salary}}">
+
+
+</div>
+
+
+
+
+<div class="col-md-6 mb-3">
+
+<label class="form-label fw-bold">
+Experience
+</label>
+
+
+<input type="number"
+name="experience"
+class="form-control"
+value="{{employee.experience}}">
+
+
+</div>
+
+
+</div>
+
+
+
+<div class="text-center mt-3">
+
+
+<button class="btn btn-success px-5">
+
+Update Employee
+
+</button>
+
+
+<a href="{% url 'employees' %}"
+class="btn btn-secondary px-4">
+
+Back
+
+</a>
+
+
+</div>
+
+
+
+</form>
+
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+{% endblock %}

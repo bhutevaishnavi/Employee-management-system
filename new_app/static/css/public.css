@@ -1,0 +1,47 @@
+/* Public pages only */
+body{
+    background:#f5f6fa;
+    font-family:Arial,sans-serif;
+}
+.navbar{
+    background:#243746 !important;
+}
+.hero-section{
+    width:85%;
+    height:300px;
+    margin:100px auto 30px;
+    background:#24364b;
+    border-radius:25px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+.hero-content h1{
+    color:white;
+    font-size:45px;
+}
+.hero-content p{
+    color:white;
+}
+.about-container{
+    width:85%;
+    margin:auto;
+}
+.about-container h1{
+    text-align:center;
+    font-size:55px;
+}
+.about-card{
+    height:220px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+}
+.about-card:hover{
+    transform:translateY(-8px);
+}
